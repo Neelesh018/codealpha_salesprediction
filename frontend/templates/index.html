@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; text-align: center; }
+        .container { width: 400px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);}
+        input, button { padding: 10px; margin: 5px; width: 90%; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📊 Advertising Sales Prediction</h2>
+        <form method="POST">
+            <input type="text" name="TV" placeholder="TV Advertising Spend" required><br>
+            <input type="text" name="Radio" placeholder="Radio Advertising Spend" required><br>
+            <input type="text" name="Newspaper" placeholder="Newspaper Advertising Spend" required><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+            <h3>Predicted Sales: {{ prediction }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
